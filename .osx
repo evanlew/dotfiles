@@ -225,9 +225,6 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Add iPhone Simulator.app to Launchpad
-ln -s /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app ~/Applications
-
 
 ###############################################################################
 # iTunes                                                                      #
