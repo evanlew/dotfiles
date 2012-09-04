@@ -12,6 +12,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+# Set computer name (as done via System Preferences → Sharing)
+MachineName = "Skinny Ninja"
+sudo scutil --set ComputerName MachineName
+sudo scutil --set HostName MachineName    
+sudo scutil --set LocalHostName MachineName
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string MachineName
 
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
